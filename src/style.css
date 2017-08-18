@@ -1,0 +1,30 @@
+.chart-series-line {
+    -fx-stroke-width: 1px;
+    -fx-effect: null;
+}
+
+#tables .table-column {
+    -fx-alignment: CENTER-RIGHT;
+}
+
+.custom-align {
+    -fx-alignment: center-right;
+}
+
+#label-headline {
+    -fx-underline: true;
+    -fx-font-size: 18px;
+    -fx-text-fill: #555555;
+}
+
+#label-textfield-description {
+    -fx-font-weight: lighter;
+    -fx-font-size: 16px;
+    -fx-text-fill: #666666;
+}
+
+#label-information {
+    -fx-font-weight: lighter;
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333;
+}
