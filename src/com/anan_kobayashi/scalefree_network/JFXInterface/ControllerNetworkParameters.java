@@ -55,7 +55,12 @@ class ControllerNetworkParameters extends BaseController {
         EventHandler<MouseEvent> event_btn_new_network = new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                int size = Integer.valueOf(view.textfield_new_network_size.getTextfield().getText());
+                int size = 1;
+                try {
+                    size = Integer.valueOf(view.textfield_new_network_size.getTextfield().getText());
+                } catch (NumberFormatException e) {
+                    // Ignore the exception and keep the size to 1.
+                }
                 data.network = new ScaleFreeNetwork<>(size);
                 data.handler.setNetwork(data.network);
                 for(Node<CircleMap> n : data.network.get_nodes())
